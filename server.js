@@ -1,32 +1,20 @@
 const express = require("express")
-const itens = require("./dados.json")
+const cors = require("cors")
 
 const rotaInicial = (req, res) => {
-    res.json("API respondendo")
+    res.json("Back-end respondendo")
 }
 
 //Configurações do servidor
 const app = express()
+app.use(cors())
+app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 const porta = 3000
 
-const mostrarItens = (req, res) => {
-    res.send(itens)
-}
-
-const consultarItens = (req, res) => {
-    if (req.body) {
-        res.send("Paciente recebido, em análise")
-        pacientes.push(req.body)
-    } else {
-        res.send("404 Not Found")
-    }
-}
-
-
-app.get('/', mostrarItens)
+//Rotas
+app.get('/', rotaInicial)
 
 app.listen(porta, () => {
     console.log(`Servidor respondendo em: http://localhost:${porta}`)
 })
-
