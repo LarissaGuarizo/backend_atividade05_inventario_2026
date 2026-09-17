@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+}
+form {
+    text-align: center;
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;              
+  max-width: 300px;       
+  margin: 0 auto
+}
+  form {
+   background-color: #21252e; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px;       
+  padding: 24px;            
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /
+}
+thead{
+   text-align: center; 
+
+}
+h2{
+    text-align: center;
+}
+body {
+    color:rgb(33, 44, 85);
+}
+header{ 
+    background-color: azure;
+    color:cornflowerblue;
+}
+ body{
+    background-color: rgb(129, 130, 130);
+}
+thead {
+    text-align: center;
+}
