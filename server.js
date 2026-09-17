@@ -1,5 +1,6 @@
 const express = require("express")
 const cors = require("cors")
+const routes = require("./src/routes")
 
 const rotaInicial = (req, res) => {
     res.json("Back-end respondendo")
@@ -14,7 +15,7 @@ const porta = 3000
 
 //Rotas
 app.get('/', rotaInicial)
-
+app.use(routes)
 app.listen(porta, () => {
     console.log(`Servidor respondendo em: http://localhost:${porta}`)
 })
